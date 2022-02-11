@@ -1,7 +1,7 @@
 /* El controller es el encargado de manejar y responder a las pegadas a la api. 
     Separar en capas nos permite 
 */
-const PostService = require("./post.service");
+const PostService = require("../services/post.service");
 
 const getPosts = async (req, res) => {
   const result = await PostService.getPosts();

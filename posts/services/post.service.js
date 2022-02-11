@@ -1,4 +1,6 @@
-const Post = require("./schemas/post");
+const Post = require("../schemas/post");
+
+// TODO: implementar middleware que funcione como global exception filter, dentro de los servicios vamos a tirar nuestras custom exceptions
 
 const getPosts = async () => {
   try {
@@ -64,4 +66,12 @@ const updatePost = async ({ id: _id, title, body }) => {
   } catch (error) {
     console.log(error);
   }
+};
+
+module.exports = {
+  getPosts,
+  createPost,
+  deletePost,
+  getById,
+  updatePost,
 };
